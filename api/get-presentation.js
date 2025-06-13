@@ -3,7 +3,7 @@
 export default function handler(request, response) {
   // --- CÓDIGO IMPORTANTE PARA QUE TU WEB PUEDA HABLAR CON VERCEL ---
   // ¡¡RECUERDA CAMBIAR ESTO POR TU DOMINIO REAL!!
-  response.setHeader('Access-Control-Allow-Origin', 'https://www.tuweb.com'); 
+  response.setHeader('Access-Control-Allow-Origin', 'https://www.sergioroman.es'); 
   response.setHeader('Access-Control-Allow-Methods', 'GET');
   response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   // --- FIN DE CÓDIGO IMPORTANTE ---

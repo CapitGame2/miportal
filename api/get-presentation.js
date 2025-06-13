@@ -1,10 +1,14 @@
 // api/get-presentation.js
 
 export default function handler(request, response) {
-  // --- CÓDIGO IMPORTANTE PARA QUE TU WEB PUEDA HABLAR CON VERCEL ---
-  // ¡¡RECUERDA CAMBIAR ESTO POR TU DOMINIO REAL!!
-  response.setHeader('Access-Control-Allow-Origin', 'https://www.sergioroman.es'); 
-  response.setHeader('Access-Control-Allow-Methods', 'GET');
+  // --- CÓDIGO IMPORTANTE MEJORADO PARA ACEPTAR AMBOS DOMINIOS ---
+  const allowedOrigins = ['https://sergioroman.es', 'https://www.sergioroman.es'];
+  const origin = request.headers.origin;
+  
+  if (allowedOrigins.includes(origin)) {
+    response.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  response.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   // --- FIN DE CÓDIGO IMPORTANTE ---
 
